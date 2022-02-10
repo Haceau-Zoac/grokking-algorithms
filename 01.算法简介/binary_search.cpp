@@ -7,8 +7,7 @@ auto binary_search(It begin, It end, T item) -> It {
   int low{ 0 };
   int high{ end - begin - 1 };
   while (high >= low) {
-    int diff{ high - low };
-    int mid{ diff / 2 + diff % 2 };
+    int mid{ (high - low) / 2 };
     if (begin[mid] == item) {
       return begin + mid;
     }
